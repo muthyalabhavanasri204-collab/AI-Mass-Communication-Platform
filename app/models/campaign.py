@@ -19,3 +19,6 @@ class Campaign(Base):
     scheduled_time = Column(String)
 
     created_by = Column(String)
+
+    # NEW
+    template_id = Column(Integer, nullable=True)
