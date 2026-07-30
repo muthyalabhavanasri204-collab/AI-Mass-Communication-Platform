@@ -1,20 +1,21 @@
-from sqlalchemy import Column, Integer, String, DateTime
-from datetime import datetime
+from sqlalchemy import Column, Integer, String, Text
 
 from app.database import Base
 
 
 class Campaign(Base):
-    __tablename__ = "campaigns"
+    __tablename__ = "campaign"
 
     id = Column(Integer, primary_key=True, index=True)
 
     title = Column(String, nullable=False)
-    message = Column(String, nullable=False)
-    target_language = Column(String, nullable=False)
 
-    created_by = Column(String)
+    description = Column(Text)
 
-    created_at = Column(DateTime, default=datetime.utcnow)
+    campaign_type = Column(String)
 
     status = Column(String, default="Draft")
+
+    scheduled_time = Column(String)
+
+    created_by = Column(String)
