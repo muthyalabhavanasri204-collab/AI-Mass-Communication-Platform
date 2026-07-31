@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-
+from datetime import datetime
+from app.models.campaign_history import CampaignHistory
 from app.database import get_db
 from app.models.campaign import Campaign
 from app.models.template import Template
