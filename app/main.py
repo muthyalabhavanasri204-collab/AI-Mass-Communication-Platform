@@ -23,6 +23,7 @@ from app.routes.organization import router as organization_router
 from app.routes.template import router as template_router
 from app.routes.campaign_history import router as campaign_history_router
 from app.routes.dashboard import router as dashboard_router
+from app.routes.translation import router as translation_router
 # ==========================
 # Create Database Tables
 # ==========================
@@ -47,6 +48,7 @@ app.include_router(organization_router)
 app.include_router(template_router)
 app.include_router(campaign_history_router)
 app.include_router(dashboard_router)
+app.include_router(translation_router)
 
 @app.get("/")
 def home():
